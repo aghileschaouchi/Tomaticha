@@ -1,9 +1,12 @@
 <RCC>
     <qresource prefix="/images">
         <file>tomatich.png</file>
-        <file>selecto.png</file>
+        <file>spaceShips_005.png</file>
+        <file>spaceMissiles_004.png</file>
+        <file>spaceMeteors_3.png</file>
+        <file>spaceMeteors_2.png</file>
+        <file>spaceMeteors_1.png</file>
+        <file>spaceMeteors_0.png</file>
         <file>bg.jpg</file>
-        <file>eddy_malou.jpg</file>
-        <file>boss.png</file>
     </qresource>
 </RCC>

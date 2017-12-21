@@ -1,1 +1,1 @@
-A funny game
+# A funny game

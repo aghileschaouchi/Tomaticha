@@ -20,7 +20,8 @@ extern Game *game;
 
 Bullet::Bullet(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem() {
     // Draw the bullet
-    setPixmap(QPixmap(":/images/tomatich.png"));
+    setPixmap(QPixmap(":/images/spaceMissiles_004.png")
+              .scaled(BULLET_WEIGHT,BULLET_HEIGHT,Qt::KeepAspectRatio));
 
     // Connect
     QTimer *timer = new QTimer();

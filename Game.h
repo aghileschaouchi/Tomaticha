@@ -8,6 +8,9 @@
 #include <QTimer>
 #include "MainPlayer.h"
 #include "Score.h"
+#include <QString>
+
+
 
 class Game: public QGraphicsView {
 public:

@@ -20,8 +20,17 @@ Enemy::Enemy(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem() {
     int random_num = rand() % (SCREEN_WEIGHT - 100);
     setPos(random_num, 0);
 
+    int random_enemy  = rand()%4;
+
+    std::string enemy_name = "spaceMeteors_";
+    std::stringstream sstm;
+
+    sstm << ":/images/" << enemy_name << random_enemy << ".png";
+    std::string result = sstm.str();
+
     // Draw the enemy
-    setPixmap(QPixmap(":/images/selecto.png"));
+    setPixmap(QPixmap(QString::fromStdString(result))
+              .scaled(ENEMY_WEIGHT,ENEMY_HEIGHT,Qt::KeepAspectRatio));
 
     // Connect
     QTimer *timer = new QTimer();

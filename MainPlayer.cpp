@@ -23,7 +23,9 @@
 
 MainPlayer::MainPlayer(QGraphicsItem *parent): QGraphicsPixmapItem(parent) {
     // Set graphics
-    setPixmap(QPixmap(":/images/boss.png"));
+    setPixmap(QPixmap(":/images/spaceShips_005.png")
+              .scaled(PLAYER_WEIGHT,PLAYER_HEIGHT,Qt::KeepAspectRatio));
+
 }
 
 void MainPlayer::keyPressEvent(QKeyEvent *event) {
@@ -48,11 +50,15 @@ void MainPlayer::keyPressEvent(QKeyEvent *event) {
         qDebug() << "Bullet :" << endl;
         qDebug() << x() << y() << endl;
 
-        Bullet * bullet = new Bullet();
-        bullet -> setPos(x(), y());
-        scene() -> addItem(bullet);
-    }
+        Bullet * left_bullet = new Bullet();
+        Bullet * right_bullet = new Bullet();
 
+        left_bullet -> setPos(x() + PLAYER_WEIGHT/2 + 15, y());
+        right_bullet -> setPos(x() + 15, y());
+
+        scene() -> addItem(left_bullet);
+        scene() -> addItem(right_bullet);
+    }
 }
 
 void MainPlayer::spawn(){

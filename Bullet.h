@@ -11,6 +11,9 @@
 #include "Enemy.h"
 #include "Game.h"
 
+#define BULLET_WEIGHT 40
+#define BULLET_HEIGHT 40
+
 class Bullet: public QObject, public QGraphicsPixmapItem {
     Q_OBJECT
 public:

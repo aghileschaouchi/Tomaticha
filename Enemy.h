@@ -9,8 +9,11 @@
 #include <QDebug>
 #include <QGraphicsScene>
 #include <stdlib.h>
+#include <string>
+#include <sstream>
 
-
+#define ENEMY_WEIGHT 100
+#define ENEMY_HEIGHT 100
 
 class Enemy: public QObject, public QGraphicsPixmapItem {
     Q_OBJECT
